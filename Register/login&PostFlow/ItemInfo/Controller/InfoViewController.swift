@@ -21,7 +21,7 @@ class InfoViewController: UIViewController {
     }
     
     func setUp() {
-        tbllist.register(UINib(nibName: "DataCell", bundle: nil), forCellReuseIdentifier: "detailsCell")
+        tbllist.register(UINib(nibName: "DataCell", bundle: nil), forCellReuseIdentifier: Constants.Identifier.detailsCell)
     }
     
     func callApi() {
@@ -48,7 +48,7 @@ extension InfoViewController:UITableViewDataSource,UITableViewDelegate,UIScrollV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tbllist.dequeueReusableCell(withIdentifier: "detailsCell", for: indexPath) as! detailsCell
+        let cell = tbllist.dequeueReusableCell(withIdentifier:Constants.Identifier.detailsCell, for: indexPath) as! detailsCell
         cell.selectionStyle = .none
         cell.lblTitle.text =  arrProduct[indexPath.row].name
         cell.lbldescription.text = arrProduct[indexPath.row].desc

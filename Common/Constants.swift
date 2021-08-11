@@ -10,4 +10,7 @@ class Constants : NSObject {
     enum baseUrl {
         static let ServiceUrl = "https://api.jsonbin.io/b/604dbddb683e7e079c4eefd3"
     }
+    enum Identifier {
+        static let detailsCell = "detailsCell"
+    }
 }
