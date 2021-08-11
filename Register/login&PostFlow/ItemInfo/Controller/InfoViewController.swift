@@ -27,7 +27,7 @@ class InfoViewController: UIViewController {
     func callApi() {
         
         self.startAnimating()
-        HttpUility.sharedInstance.getApiData(requestUrl: URL(string: "https://api.jsonbin.io/b/604dbddb683e7e079c4eefd3")!, resultType: ProductList.self) { (Productlist) in
+        HttpUility.sharedInstance.getApiData(requestUrl: URL(string:Constants.baseUrl.ServiceUrl)!, resultType: ProductList.self) { (Productlist) in
             if Productlist.products.count != 0 {
                 self.stopAnimating()
                 DispatchQueue.main.async {
